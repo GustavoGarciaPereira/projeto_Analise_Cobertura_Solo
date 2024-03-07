@@ -7,3 +7,6 @@ tecnologias pesquisadas até o momento
 NASA Earthdata
 
 Google Earth Engine
+
+
+analizar o tipo do solo selecionado
