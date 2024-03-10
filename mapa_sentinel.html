@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_21572459eedb1e48d8f10bb3dc411839 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_21572459eedb1e48d8f10bb3dc411839" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_21572459eedb1e48d8f10bb3dc411839 = L.map(
+                "map_21572459eedb1e48d8f10bb3dc411839",
+                {
+                    center: [-30.16630791380963, -53.568136475533386],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_99fd53ff3de98860d3d7adf42d4faeb0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_99fd53ff3de98860d3d7adf42d4faeb0.addTo(map_21572459eedb1e48d8f10bb3dc411839);
+        
+    
+            var tile_layer_6ccd7320966e0cfcc418ff59ec41177c = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/proven-splicer-105011/maps/fe107b8962e41d62b1864e74a2fc1afd-b250c1664ee32b56d7aa45d91c73dbce/tiles/{z}/{x}/{y}",
+                {"attribution": "Map Data \u0026copy; \u003ca href=\"https://earthengine.google.com/\"\u003eGoogle Earth Engine\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6ccd7320966e0cfcc418ff59ec41177c.addTo(map_21572459eedb1e48d8f10bb3dc411839);
+        
+    
+            var layer_control_330b7798b2ee30bc5d82120eac388832_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_99fd53ff3de98860d3d7adf42d4faeb0,
+                },
+                overlays :  {
+                    "Imagem Sentinel-2" : tile_layer_6ccd7320966e0cfcc418ff59ec41177c,
+                },
+            };
+            let layer_control_330b7798b2ee30bc5d82120eac388832 = L.control.layers(
+                layer_control_330b7798b2ee30bc5d82120eac388832_layers.base_layers,
+                layer_control_330b7798b2ee30bc5d82120eac388832_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_21572459eedb1e48d8f10bb3dc411839);
+
+        
+</script>
+</html>
