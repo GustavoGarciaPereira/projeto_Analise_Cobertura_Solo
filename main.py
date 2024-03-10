@@ -8,6 +8,7 @@ project = os.getenv('PROJECT')
 
 # print(project)
 # Inicializa a biblioteca.
+ee.Authenticate()
 ee.Initialize(project=project)
 
 # Define a área de interesse (AOI) com uma caixa de delimitação.
